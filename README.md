@@ -4,4 +4,7 @@
 
 ## TODO List
 
+- [ ] Add a base HTML for templates/views
+- [ ] Command line tool to generate models and migrations
+
 ## Documentations
