@@ -16,3 +16,11 @@ app.set('views', path.join(__dirname, 'views')); // Path to views folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes'));
+
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connection to the database has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
