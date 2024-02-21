@@ -1,12 +1,12 @@
 {
   "name": "jails",
   "version": "0.0.1",
-  "description": "## What is Jails?",
+  "description": "# An MVC framework written in JS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
