@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "Muhammadreza Haghiri",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7"
+  }
 }
