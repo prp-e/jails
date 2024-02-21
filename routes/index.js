@@ -1,4 +1,5 @@
 const express = require('express');
+const SampleController = require('../controllers/SampleController');
 const router = express.Router();
 
 /*
@@ -14,5 +15,7 @@ It'll be more automated as soon as possible.
 */
 
 // Define routes
+
+router.get('/sample', SampleController.getIndex)
 
 module.exports = router;
