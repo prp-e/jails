@@ -1,4 +1,7 @@
 const SampleController = {
+    getIndex: (req, res) => {
+        
+    }
 
 }
 
