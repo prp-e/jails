@@ -10,8 +10,8 @@ const sequelize = new Sequelize({
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.set('view engine', 'ejs'); // Using EJS as the template engine
-app.set('views', path.join(__dirname, 'views')); // Path to views folder
+app.set('view engine', 'ejs'); 
+app.set('views', path.join(__dirname, 'views')); 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -29,4 +29,4 @@ sequelize.authenticate()
         console.log(`Server is running on port ${PORT}`);
 });
     
-module.exports = sequelize; // Export Sequelize instance for models
+module.exports = sequelize; 
