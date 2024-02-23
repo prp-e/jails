@@ -7,7 +7,11 @@ The project can be a good basis for people who want to understand how these MVC/
 
 ## TODO List
 
-- [ ] Add a base HTML for templates/views
+- [x] Add a base HTML for templates/views
 - [ ] Command line tool to generate models and migrations
 
 ## Documentations
+
+### Basic CRUD example 
+
+First, this
