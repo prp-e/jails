@@ -188,3 +188,20 @@ Making views isn't really that hard. Just under `views` folder, create another f
 </html>
 
 ```
+
+`views/posts/show.ejs`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+</head>
+<body>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+</body>
+</html>
+``` 
