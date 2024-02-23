@@ -39,3 +39,46 @@ const Post = sequelize.define('Post', {
 
 module.exports = Post;
 ```
+
+- Creating the database migrations
+
+Then, in the `migrations` folder, create a file named `20240224-create-post.js` (name can be anything you desire) and then copy this to that file:
+
+```js
+'use strict';
+const { DataTypes } = require('sequelize');
+
+module.exports = {
+    up: async (queryInterface, Sequelize) => {
+        await queryInterface.createTable('Posts', {
+            id: {
+                allowNull: false,
+                autoIncrement: true,
+                primaryKey: true,
+                type: DataTypes.INTEGER
+            },
+            title: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
+            body: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            },
+            createdAt: {
+                allowNull: false,
+                type: DataTypes.DATE
+            },
+            updatedAt: {
+                allowNull: false,
+                type: DataTypes.DATE
+            }
+        });
+    },
+    down: async (queryInterface, Sequelize) => {
+        await queryInterface.dropTable('Posts');
+    }
+};
+``` 
+
+After that, by running `npx sequelize db:migrate` the table responsible for this model will be created. 
