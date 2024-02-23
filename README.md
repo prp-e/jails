@@ -169,4 +169,22 @@ Making views isn't really that hard. Just under `views` folder, create another f
 `views/posts/index.ejs`
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+</head>
+<body>
+    <h1>All Posts</h1>
+    <ul>
+        <% posts.forEach(post => { %>
+            <li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>
+        <% }); %>
+    </ul>
+    <a href="/posts/create">Create New Post</a>
+</body>
+</html>
+
 ```
