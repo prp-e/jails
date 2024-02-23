@@ -137,3 +137,27 @@ const PostController = {
 module.exports = PostController;
 
 ```
+
+- Routes 
+
+Now for creating responsible routes, just create a `posts.js` in `routes` folder with content similar to this:
+
+```js
+const express = require('express');
+const router = express.Router();
+const PostController = require('../controllers/PostController');
+
+// Show all posts
+router.get('/', PostController.getAllPosts);
+
+// Show individual post
+router.get('/:id', PostController.getPostById);
+
+// Show post creation form
+router.get('/create', PostController.showPostForm);
+
+// Create new post
+router.post('/create', PostController.createPost);
+
+module.exports = router;
+```
