@@ -161,3 +161,12 @@ router.post('/create', PostController.createPost);
 
 module.exports = router;
 ```
+
+- Views 
+
+Making views isn't really that hard. Just under `views` folder, create another folder called `posts` and then add these with the suggested names: 
+
+`views/posts/index.ejs`
+
+```html
+```
