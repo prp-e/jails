@@ -12,7 +12,7 @@ The project can be a good basis for people who want to understand how these MVC/
     - [ ] A command to create models and respective migrations 
     - [ ] A command to make controllers based on a certain template
     - [ ] Scaffolding option (create model, migration, CRUD controllers and views)
-- [ ] 
+- [ ] Custom Database Support (a command to create new project based on this architecture with desired DBMS of yours).
 
 ## Documentations
 
