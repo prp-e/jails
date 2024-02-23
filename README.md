@@ -14,4 +14,6 @@ The project can be a good basis for people who want to understand how these MVC/
 
 ### Basic CRUD example 
 
-First, this
+First, this is still a fun project and if you want to help me make it a usable tool, please take a look at [CONTRIBUTING.md](CONTRIBUTING.md) file and learn how to contribute to the project. Also using our _TODO List_ you can easily find what do we need. 
+
+But let's assume you just want to test this project and make a simple CRUD application. Here we assume you're going to make a simple blog, and you only need a _post model_. 
