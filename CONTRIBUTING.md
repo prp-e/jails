@@ -9,3 +9,5 @@ In order to contribute, just follow these steps:
 - Open a PR!
 
 ## Notes
+
+- I use `nvm` and the latest release of NodeJS LTS. I recommend you do the same in order to be in sync with each other!
