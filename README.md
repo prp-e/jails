@@ -9,6 +9,10 @@ The project can be a good basis for people who want to understand how these MVC/
 
 - [x] Add a base HTML for templates/views
 - [ ] Command line tool to generate models and migrations
+    - [ ] A command to create models and respective migrations 
+    - [ ] A command to make controllers based on a certain template
+    - [ ] Scaffolding option (create model, migration, CRUD controllers and views)
+- [ ] 
 
 ## Documentations
 
