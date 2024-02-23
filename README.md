@@ -23,5 +23,19 @@ But let's assume you just want to test this project and make a simple CRUD appli
 In `models` folder, create a file called `Post.js` and copy this to that file:
 
 ```js
+const { DataTypes } = require('sequelize');
+const sequelize = require('../server');
 
+const Post = sequelize.define('Post', {
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    body: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    }
+});
+
+module.exports = Post;
 ```
