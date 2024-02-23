@@ -82,3 +82,58 @@ module.exports = {
 ``` 
 
 After that, by running `npx sequelize db:migrate` the table responsible for this model will be created. 
+
+- Controllers 
+
+In `controllers` folder, create a file named `PostController.js` and then change it like this:
+
+```js
+const Post = require('../models/Post');
+
+const PostController = {
+    // Show all posts
+    getAllPosts: async (req, res) => {
+        try {
+            const posts = await Post.findAll();
+            res.render('posts/index', { posts });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Internal Server Error');
+        }
+    },
+
+    // Show individual post
+    getPostById: async (req, res) => {
+        try {
+            const post = await Post.findByPk(req.params.id);
+            if (!post) {
+                return res.status(404).send('Post not found');
+            }
+            res.render('posts/show', { post });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Internal Server Error');
+        }
+    },
+
+    // Show post creation form
+    showPostForm: (req, res) => {
+        res.render('posts/create');
+    },
+
+    // Create new post
+    createPost: async (req, res) => {
+        try {
+            const { title, body } = req.body;
+            const post = await Post.create({ title, body });
+            res.redirect(`/posts/${post.id}`);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Internal Server Error');
+        }
+    }
+};
+
+module.exports = PostController;
+
+```
